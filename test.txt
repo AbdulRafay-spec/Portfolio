@@ -1,0 +1,53 @@
+<html>
+<head>
+    <style>
+        h1 {
+            color: white;
+        }
+        .center-iframe {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+
+    <h1 align="center"> 
+        KickFliMedia ChatBot Demonstration on a webpage 
+    </h1>
+
+    <div class="center-iframe">
+        <iframe style="width: 400px; height: 600px;" 
+                src="https://app.fastbots.ai/embed/cmawg69f500wpn8lwxt4t97wf">
+        </iframe>
+    </div>
+
+<script>
+  var vapiInstance = null;
+  const assistant = "91dcbd00-3fc1-4898-8f38-360a57f9483c";
+  const apiKey = "8b282684-7661-418c-ac8e-2012e05a0ebe";
+  const buttonConfig = {}; // Modify this as required
+
+  (function (d, t) {
+    var g = document.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    g.src =
+      "https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js";
+    g.defer = true;
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
+
+    g.onload = function () {
+      vapiInstance = window.vapiSDK.run({
+        apiKey: apiKey,
+        assistant: assistant,
+        config: buttonConfig, // optional
+      });
+    };
+  })(document, "script");
+</script>
+
+</body>
+</html>
